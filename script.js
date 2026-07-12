@@ -76,31 +76,17 @@ function runFlight() {
 
     let fuel = Math.floor(Math.random() * 101);
 
-    let fuelStatus;
-
-    if (fuel < 20) {
-
-        fuelStatus = "⚠ FUEL LOW";
-
-    } 
-
-    else {
-
-        fuelStatus = "FUEL NORMAL";
-
-    }
-
-    // LANDING GEAR
+    // GEAR
 
     let gear = Math.floor(Math.random() * 2) + 1;
 
     let gearStatus;
 
-    if (gear > 1) {
+    if (gear == 2) {
 
         gearStatus = "GEAR UP";
 
-    } 
+    }
 
     else {
 
@@ -108,40 +94,66 @@ function runFlight() {
 
     }
 
-    // WARNINGS
-
-    let warning = "STATUS: NORMAL";
-
-    if (altitude < 20 && gear == 2) {
-
-        warning = "⚠ GEAR WARNING";
-
-    }
-
-    // SEND DATA TO SCREEN
+    // UPDATE MAIN DISPLAY
 
     document.getElementById("altitude").innerHTML =
 
-        "ALTITUDE: " + altitude + " ft<br>" + altitudeStatus;
+        altitude + " ft";
+
+    document.getElementById("altitudeStatus").innerHTML =
+
+        altitudeStatus;
 
     document.getElementById("heading").innerHTML =
 
-        "HEADING: " + heading + " degrees<br>" + headingStatus;
+        heading + "°";
+
+    document.getElementById("headingStatus").innerHTML =
+
+        headingStatus;
 
     document.getElementById("airspeed").innerHTML =
 
-        "AIRSPEED: " + airspeed + " kts<br>" + speedStatus;
+        airspeed + " kts";
+
+    document.getElementById("speedStatus").innerHTML =
+
+        speedStatus;
 
     document.getElementById("fuel").innerHTML =
 
-        "FUEL: " + fuel + "%<br>" + fuelStatus;
+        fuel + "%";
 
     document.getElementById("gear").innerHTML =
 
         gearStatus;
 
-    document.getElementById("warning").innerHTML =
+    // WARNING LIGHTS
 
-        warning;
+    let fuelLight = document.getElementById("fuelLight");
+
+    let gearLight = document.getElementById("gearLight");
+
+    // Reset warnings
+
+    fuelLight.className = "warning fuelOff";
+
+    gearLight.className = "warning gearOff";
+
+    // Fuel warning
+
+    if (fuel < 20) {
+
+        fuelLight.className = "warning fuelOn";
+
+    }
+
+    // Gear warning
+
+    if (altitude < 20 && gear == 2) {
+
+        gearLight.className = "warning gearOn";
+
+    }
 
 }
