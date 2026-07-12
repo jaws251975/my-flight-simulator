@@ -4,49 +4,97 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Flight Computer MK-1</title>
+<title>Flight Computer MK-1</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-    <div class="computer">
+<div class="computer">
 
-        <h1>✈ FLIGHT COMPUTER MK-1</h1>
+    <h1>✈ FLIGHT COMPUTER MK-1</h1>
 
-        <div class="display">
+    <div class="display">
 
-            <p id="altitude">ALTITUDE: --- ft</p>
+        <div class="instrument">
 
-            <p id="heading">HEADING: ---°</p>
+            <h2>ALTITUDE</h2>
 
-            <p id="airspeed">AIRSPEED: --- kts</p>
+            <p id="altitude">--- ft</p>
 
-            <p id="fuel">FUEL: ---%</p>
-
-            <p id="gear">GEAR: ---</p>
-
-            <p id="warning">STATUS: NORMAL</p>
+            <p id="altitudeStatus">----------</p>
 
         </div>
 
-        <!-- This is the button -->
+        <div class="instrument">
 
-        <button id="runButton" onclick="runFlight()">
+            <h2>HEADING</h2>
 
-            RUN FLIGHT CHECK
+            <p id="heading">---°</p>
 
-        </button>
+            <p id="headingStatus">----------</p>
+
+        </div>
+
+        <div class="instrument">
+
+            <h2>AIRSPEED</h2>
+
+            <p id="airspeed">--- kts</p>
+
+            <p id="speedStatus">----------</p>
+
+        </div>
+
+        <div class="instrument">
+
+            <h2>FUEL</h2>
+
+            <p id="fuel">---%</p>
+
+        </div>
+
+        <div class="instrument">
+
+            <h2>LANDING GEAR</h2>
+
+            <p id="gear">----------</p>
+
+        </div>
 
     </div>
 
-    <script src="script.js"></script>
+    <div class="warnings">
+
+        <div id="fuelLight" class="warning fuelOff">
+
+            FUEL WARNING
+
+        </div>
+
+        <div id="gearLight" class="warning gearOff">
+
+            GEAR DOWN WARNING
+
+        </div>
+
+    </div>
+
+    <button onclick="runFlight()">
+
+        RUN FLIGHT CHECK
+
+    </button>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 
