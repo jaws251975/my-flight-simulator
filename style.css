@@ -18,6 +18,8 @@ body {
 
 }
 
+/* Main computer screen */
+
 .computer {
 
     width: 90%;
@@ -26,93 +28,169 @@ body {
 
     border: 3px solid #00ff00;
 
-    padding: 25px;
+    padding: 20px;
 
-    box-shadow: 0 0 25px #00ff00;
+    box-shadow:
+
+        0 0 15px #00ff00,
+
+        inset 0 0 20px #003300;
 
     text-align: center;
 
 }
+
+/* Title */
 
 h1 {
 
     font-size: 24px;
 
-    text-shadow: 0 0 10px #00ff00;
+    text-shadow:
+
+        0 0 10px #00ff00;
 
 }
+
+/* Instrument area */
 
 .display {
 
     border: 2px solid #00ff00;
 
-    padding: 20px;
+    padding: 15px;
 
     margin-top: 20px;
 
-    text-align: left;
+    box-shadow:
 
-    box-shadow: inset 0 0 15px #00ff00;
+        inset 0 0 15px #00ff00;
+
+}
+
+/* Individual displays */
+
+.instrument {
+
+    border-bottom: 1px solid #006600;
+
+    padding: 8px;
+
+}
+
+.instrument:last-child {
+
+    border-bottom: none;
+
+}
+
+h2 {
+
+    font-size: 14px;
+
+    margin: 5px;
 
 }
 
 p {
 
+    margin: 5px;
+
     font-size: 18px;
 
-    margin: 15px 0;
+    text-shadow:
 
-    text-shadow: 0 0 5px #00ff00;
+        0 0 6px #00ff00;
 
 }
 
-/* Warning lights */
+/* Warning section */
 
-.warning-box {
+.warnings {
 
-    padding: 12px;
+    display: flex;
 
-    margin-top: 15px;
+    gap: 10px;
 
-    text-align: center;
+    margin-top: 20px;
+
+    justify-content: center;
+
+}
+
+.warning {
+
+    width: 45%;
+
+    padding: 12px 5px;
 
     font-weight: bold;
+
+    font-size: 13px;
 
     border-radius: 5px;
 
 }
 
-/* Yellow gear warning */
+/* Fuel warning OFF */
 
-.gear-warning {
+.fuelOff {
 
-    background-color: #806600;
+    border: 2px solid #550000;
 
-    color: yellow;
-
-    border: 2px solid yellow;
-
-    box-shadow: 0 0 15px yellow;
+    color: #550000;
 
 }
 
-/* Red fuel warning */
+/* Fuel warning ON */
 
-.fuel-warning {
+.fuelOn {
 
-    background-color: #800000;
+    background-color: red;
 
-    color: red;
+    color: white;
 
     border: 2px solid red;
 
-    box-shadow: 0 0 15px red;
+    box-shadow:
+
+        0 0 20px red;
 
 }
+
+/* Gear warning OFF */
+
+.gearOff {
+
+    border: 2px solid #665500;
+
+    color: #665500;
+
+}
+
+/* Gear warning ON */
+
+.gearOn {
+
+    background-color: yellow;
+
+    color: black;
+
+    border: 2px solid yellow;
+
+    box-shadow:
+
+        0 0 20px yellow;
+
+}
+
+/* Button */
 
 button {
 
     margin-top: 25px;
+
+    padding: 14px 25px;
 
     background-color: black;
 
@@ -120,13 +198,13 @@ button {
 
     border: 2px solid #00ff00;
 
-    padding: 14px 25px;
-
     font-family: "Courier New", monospace;
 
     font-size: 16px;
 
-    box-shadow: 0 0 10px #00ff00;
+    box-shadow:
+
+        0 0 10px #00ff00;
 
 }
 
