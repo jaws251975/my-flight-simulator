@@ -1,5 +1,7 @@
 function runFlight() {
 
+    // ALTITUDE
+
     let altitude = Math.floor(Math.random() * 91) + 10;
 
     let altitudeStatus;
@@ -21,6 +23,8 @@ function runFlight() {
         altitudeStatus = "MAINTAIN ALTITUDE";
 
     }
+
+    // HEADING
 
     let heading = Math.floor(Math.random() * 181);
 
@@ -44,6 +48,8 @@ function runFlight() {
 
     }
 
+    // AIRSPEED
+
     let airspeed = Math.floor(Math.random() * 81) + 50;
 
     let speedStatus;
@@ -66,6 +72,8 @@ function runFlight() {
 
     }
 
+    // FUEL
+
     let fuel = Math.floor(Math.random() * 101);
 
     let fuelStatus;
@@ -81,6 +89,8 @@ function runFlight() {
         fuelStatus = "FUEL NORMAL";
 
     }
+
+    // LANDING GEAR
 
     let gear = Math.floor(Math.random() * 2) + 1;
 
@@ -98,7 +108,9 @@ function runFlight() {
 
     }
 
-    let warning = "";
+    // WARNINGS
+
+    let warning = "STATUS: NORMAL";
 
     if (altitude < 20 && gear == 2) {
 
@@ -106,28 +118,30 @@ function runFlight() {
 
     }
 
-    console.log("ALTITUDE:", altitude, "ft");
+    // SEND DATA TO SCREEN
 
-    console.log(altitudeStatus);
+    document.getElementById("altitude").innerHTML =
 
-    console.log("HEADING:", heading, "degrees");
+        "ALTITUDE: " + altitude + " ft<br>" + altitudeStatus;
 
-    console.log(headingStatus);
+    document.getElementById("heading").innerHTML =
 
-    console.log("AIRSPEED:", airspeed, "kts");
+        "HEADING: " + heading + " degrees<br>" + headingStatus;
 
-    console.log(speedStatus);
+    document.getElementById("airspeed").innerHTML =
 
-    console.log("FUEL:", fuel + "%");
+        "AIRSPEED: " + airspeed + " kts<br>" + speedStatus;
 
-    console.log(fuelStatus);
+    document.getElementById("fuel").innerHTML =
 
-    console.log(gearStatus);
+        "FUEL: " + fuel + "%<br>" + fuelStatus;
 
-    if (warning) {
+    document.getElementById("gear").innerHTML =
 
-        console.log(warning);
+        gearStatus;
 
-    }
+    document.getElementById("warning").innerHTML =
+
+        warning;
 
 }
