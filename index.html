@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Flight Computer MK-1</title>
 
@@ -12,17 +16,38 @@
 
 <body>
 
-<div class="computer">
+    <div class="computer">
 
-    <h1>✈ FLIGHT COMPUTER MK-1</h1>
+        <h1>✈ FLIGHT COMPUTER MK-1</h1>
 
-    <div class="display">
+        <div class="display">
 
-        <p id="altitude">ALTITUDE: --- ft</p>
+            <p id="altitude">ALTITUDE: --- ft</p>
 
-        <p id="heading">HEADING: --- degrees</p>
+            <p id="heading">HEADING: ---°</p>
 
-        <p id="airspeed">AIRSPEED: --- kts</p>
+            <p id="airspeed">AIRSPEED: --- kts</p>
 
-        <p id="fuel">FUEL: ---%</p>
-        <script src="script.js"></script>
+            <p id="fuel">FUEL: ---%</p>
+
+            <p id="gear">GEAR: ---</p>
+
+            <p id="warning">STATUS: NORMAL</p>
+
+        </div>
+
+        <!-- This is the button -->
+
+        <button id="runButton" onclick="runFlight()">
+
+            RUN FLIGHT CHECK
+
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
